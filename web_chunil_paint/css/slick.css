@@ -1,0 +1,163 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slide_content .slick-prev{right:100px; background-image:url(../image/arrow_1.png);background-color: blue;border:none;}
+.slide_content .slick-next{right:50px; background-image:url(../image/arrow_2.png);}
+.slide_content .slick-dots{font-size:0; position:absolute; /*bottom: 52%;*/ left:50%; transform: translate(-50%); background-color:#ccc;}
+.slide_content .slick-dots li{display:inline-block;/*margin: 0 10px;*/}
+.slide_content .slick-dots button{background-color:transparent;width:250px;height:5px; /*border-radius:50%;*/font-size:0; border:none}
+.slide_content .slick-dots li.slick-active button{background-color:#3b5494;}
+.slide_content .slick-arrow{position:absolute;bottom:-4%;transform: translate(0,-50%);   z-index:99;
+    background-color:transparent;
+    border:none;
+    font-size:0; width:32px; height:32px; background-size:cover;
+background-repeat: no-repeat;}
+
+
+.notice_bg .slick-list {height:26px; overflow:hidden;/*border:3px solid purple;*/padding:0 !important;}
+.notice_bg .slick-prev{left:-25px; top:10px; background-image:url(../image/top_button.png);background-color: blue;border:none;}
+.notice_bg .slick-next{left:-25px; top:25px; background-image:url(../image/bottom_button.png);}
+.notice_bg .slick-arrow{position:absolute; ;transform: translate(0,-50%);  /*  z-index:99; } */
+    background-color:transparent;
+    border:none;
+    font-size:0; width:17px; height:10px; background-size:cover;
+background-repeat: no-repeat;cursor: pointer;} 
+
+
+#product .slick-prev{left:-70px; background-image:url(../image/arr_prev.png); z-index:99999;cursor: pointer;}
+#product .slick-next{right:-70px; background-image:url(../image/arr_next.png);z-index:99999;cursor: pointer;}
+#product .slick-dots{font-size:0; position:absolute; bottom: -20px; left:50%; transform: translate(-50%);}
+
+#product .slick-arrow{position:absolute; ;transform: translate(0,-50%);  /*  z-index:99; } */
+background-color:transparent;
+border:none;
+font-size:0; width:42px; height:45px; background-size:cover;
+background-repeat: no-repeat; z-index: 99999 ;top:50%}
+#product .slick-dots li{display:inline-block;/*margin: 0 10px;*/}
+#product .slick-dots button{background-color:#ccc;width:50px;height: 5px;font-size:0; border:none}
+#product .slick-dots li.slick-active button{background-color:#3b5494;}
+#product .slick-list{padding-bottom:15px;}
+
+/*제품 여백 */
+#product  .slick-slide > div{/*margin:0 30px*/text-align: center;}
+
+#product .slick-prev:hover{background-image:url(../image/arr_prev_on.png);}
+#product .slick-next:hover{background-image:url(../image/arr_next_on.png);}
+

@@ -1,0 +1,134 @@
+@charset "utf-8";
+@font-face { font-family : font_woff;  font-weight:300;  
+    src : url(../font/Title_Light.woff); }  
+    @font-face { font-family : font_woff;  font-weight:400;  
+        src : url(../font/Title_Medium.woff); }  
+        @font-face { font-family : font_woff;  font-weight:700;  
+            src : url(../font/Title_Bold.woff); }  
+   
+            .under_line{text-decoration: underline;}
+    section{background-color:transparent;padding-top:117px;text-align: center;}
+    h4{font-size:3rem; color:#000;text-align: center;padding: 20px 0;}
+    img{padding: 20px 0;}
+    .company .inner{display: flex;justify-content: space-between;}
+    .company p{color:#000;line-height:2.5rem; font-size:1.2rem;}
+    #wrap{width: 100%; position: relative;overflow:hidden}
+    .inner{width: 100%; max-width:1400px;margin:0 auto;}
+   /* body{background-color:yellowgreen;}*/
+    #header #logo a{background:url(../image/logo_blue.png) no-repeat; height:60px; width:266px;display:block;}
+    #header{height: 117px;display:flex; align-content:center; z-index: 9999;
+    border-bottom:1px solid #aaa;  width:100%;position: relative;}
+    #header .inner{display:flex; align-items: center;justify-content: space-around;}   
+    #nav{ /*height:40px;*/  width:calc(100% - 400px);}
+    #nav .depth1{display:flex;}
+    #nav .depth1 > li{margin-right:7%;height:117px; transition:1s;}
+    #nav .depth1 > li > a {display:block; text-align: center; font-weight:bold; color:#284a9a; line-height:40px;font-size:1.5rem;
+    padding-bottom:50px;padding-top:40px}
+    #nav .depth2 {position:absolute;background-color:#fff; width:100%;display:none;  top:117px;left:0; }
+    #nav .depth2 .inner{display: flex;justify-content: space-between;}
+     /* 
+        width100%를 주지 않았을 경우 화면의 가운데에 오도록 하는 방법
+        (1) margin:auto가 안된다 왜냐하면 absolute니까
+        (2) 해결방법 left:50%;transform:translate(-50%,0);
+    */
+    #nav .depth1 > li:hover .depth2{display:flex; }
+    #nav .depth2 >li{width:20%; box-sizing:border-box; border:2px solid red; margin-bottom:20px;}
+    .nav_back{position: absolute;top:117px;width:100%;height:calc(100% - 117px);background-color:rgba(0,0,0,0.8);z-index:9998;
+              display: none;}
+    #nav .nav_right{background-color:#fff;}
+    #nav .nav_left{background-color:#fff;padding-left:100px}
+    #nav .nav_left ul{display:flex; flex-wrap: wrap;align-content:center;}
+
+    #nav .nav_left li{margin: 20px; font-size:1.2rem; border:1px solid #1597e5; border-radius: 10px; width:300px; height:50px; margin-top:50px} 
+    #nav .nav_left li:hover{background-color: #1597e5;color:#fff}
+    #nav .nav_left li a{padding:10px 0;display:inline-block; width:100%; text-align:center;}
+    .btn_all i{font-size:0;}
+
+
+    #footer{background:url(../image/bottom_leaf_sub.png) no-repeat; 
+    width:100%;text-align:center; color:#fff; word-break: keep-all;padding-bottom:30px}
+    #footer .footer_logo{padding-top:6%;margin-bottom:10px;}
+   
+
+
+    /*전체메뉴 보기 시작*/
+    .btn_all {width:30px;height:30px;position:absolute;
+        top:50px;right:50px;
+        z-index:999999}
+.btn_all span    
+{
+position: absolute;
+left: 0;
+height: 3px;
+background-color: #fff;
+transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out;
+width: 100%;
+border-radius: 2px;
+}
+.btn_all span:nth-child(1){
+   top:0px;
+}
+.btn_all span:nth-child(2){
+   top:10px;
+   width:15px;
+   margin-left:7.5px;
+   
+}
+.btn_all span:nth-child(3){
+   top: 20px;
+}
+
+
+.btn_all.on span{background-color:#fff}
+.btn_all.on span:nth-child(1){
+   top:10px;
+   transform: rotate(45deg);
+   background-color:#343434;
+}
+.btn_all.on span:nth-child(2){
+   top:10px;
+   width:0;
+   background-color:#343434;
+}
+.btn_all.on span:nth-child(3){
+   top: 10px;
+   transform: rotate(-45deg);
+   background-color:#343434;
+}
+.box{
+  position:fixed;
+  top:0;left:0;
+  height:100%;
+  width:100%;
+  background-image:url('../image/nav_back_bg.png');
+  background-position: right 5% bottom 5%;
+  background-repeat: no-repeat;
+  background-color:rgba(255,255,255,0.98);
+  z-index:10;
+  display: none;
+  z-index: 99999;
+
+}
+.box .depth1{display:flex; justify-content: center;margin:117px;flex-wrap: wrap;} 
+.box .depth1>li > a {font-size:1.5rem; color:#343434}
+.box .depth1>li{padding:0 40px}
+.box .depth1 li{text-align: center;}
+.box .depth2{padding-top:20px;}
+.box .depth2 li{font-size:1.2rem; font-weight:300;color:#343434;padding-bottom:15px;}
+.box li{text-align:center;}
+.box .logo_blue{transform: translate(15%,65%);}
+.box .depth2 li:hover a{text-decoration: underline;}
+/*전체 메뉴 보기 끝*/
+
+
+#pop_up{width:100%; height:100%; position:fixed; left:0; top:0; background:rgba(0,0,0, 0.6);/* display:none;*/z-index:1000000;}/*뒷 배경*/
+#pop_up .img{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);  background:white;text-align:center;width:40%;}
+#pop_up .img img{display:block;/* padding:20px;*/width:100%}
+button{cursor:pointer;}
+#pop_up .btn{text-align:center;}
+#pop_up .btn button{padding:2% 3%; border:none; border-radius:50%; background:#333; color:white;font-size:2rem;position: absolute; right:-4%; top:-7%}
+
+.modal{display:block; margin-top:20px; margin-bottom:50px; position:absolute; top:110%;left:5%;text-align:center; color:#000;font-size:1.5rem;} 
+/*.kor{position:absolute;right:10px; top:0; width:auto; border: 2px solid #fff;border-radius:20px; padding:2px 10px; color:#fff;}
+.kor img{width:20px;margin: 0 auto;}*/

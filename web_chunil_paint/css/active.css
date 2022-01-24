@@ -1,0 +1,122 @@
+/* 11월 25일 내가 해야할일 
+1300일때 푸터 글자 위치 중앙으로  --> ok 
+
+1180일때 슬라이드 둥근배경위로,  --> OK
+푸터 글자 위치 중앙으로
+
+768일때 푸터 글자 위치 중앙으로,  ok 
+슬라이드 도트 지우고 , --> 실패 
+슬라이드파란배경 ok 
+슬라이드 둥근배경위로 올리고, --> ok도 줄이고  --> oK
+가이드 최적화 개편 
+
+팝업창 디자인 */
+@media all and (max-width:1300px){
+    /*네비의 여백을 줄이자*/
+    #nav .depth1 > li{margin-right:4.9%}
+    /*1300 이하로 내려가면 이벤트 버튼을 아래로 내리자*/
+        .modal{top:130%} 
+    /*추천제품의 슬라이드를 2개로 줄이는건 main.js에 넣고 화살표만 옮기자 */
+    #product .slick-prev{left:30%;top:104% ; z-index:99999;} 
+    #product .slick-next{right:30%;top:104%; z-index:99999;}
+
+    /*인사의 이미지를 왼쪽으로 조금 더 옮기자 글자사이즈도 줄이자*/
+    #hello img{transform: translate(-50px,0);}
+    #hello .insa p{font-size:2.5rem}
+
+    /*가이드와 푸터 배경을 중앙(왼쪽)으로 옮기자 */
+
+    #footer{background-position-x:400%;}
+    /*푸터의 글자들도 중앙으로 옮기자*/
+  /*  #footer p{transform: translate(-15%,0);}*/
+}/*end*/
+
+@media all and (max-width:1180px){
+    /*네비의 여백을 줄이자*/
+    #nav .depth1 > li{margin-right:3%}
+    /*인사의 글자사이즈를 줄이자*/
+    #hello .insa p{font-size:2.3rem ;}
+    /*가이드와 푸터 배경을 중앙(왼쪽)으로 옮기자 */
+
+    #footer{background-position-x:500%;}
+    /*공지사항 크기를 줄이자 */
+    #guide .notice_tit{width:90%;margin:auto;}
+   /* #guide .notice_txt{} 글자가 한줄씩 내려가는 깨짐 현상이 일어나는데 새로고침하면 괜찮음*/
+    /*푸터의 글자들도 중앙으로 옮기자*/
+  /*  #footer p{transform: translate(-50%,0);}*/
+    #slide .slide_content{width:90%;margin:0 auto;height:200px;} /*이미지가 같이 안줄어들어서 잘리는 현상은 35번줄에서  아마도 해결한거 같다.*/
+    #slide .slide_content_img img{width:100%;} /*맞는지 확신이 안든다.*/
+    #top{bottom: 10%; z-index:10000;}
+    #slide .slide_tit{padding-top:20% ;}
+    #slide .slide_img{bottom:-15%;}
+    #slide .slick-dots{font-size:0; position:absolute; bottom: 0; left:50%; transform: translate(-50%);background-color: transparent;}
+    #slide .slick-dots li{display:inline-block;margin: 0 10px;}
+    #slide .slick-dots button{background-color:rgba(0,0,0,0.5);width:20px;height: 20px; font-size:0; border:none;}
+    #slide .slick-dots li.slick-active button{background-color:#3b5494;}
+    
+}/*end*/
+@media all and (max-width:1080px){#nav{display:none;}
+#hello .insa{position:absolute; z-index:10000; background-color:rgba(255,255,255,0.3); /*padding:100px*/}
+#hello img{margin:0 auto;}
+}
+@media all and (max-width:768px){
+html{font-size:14px; transition: font-size 0.5s;}
+.slide_content .slick-dots{display:none;}
+#nav{display:none;}
+#slide .slide_tit{padding-top:30% ;}
+#slide .slide_content_img{border-bottom-right-radius:50px}
+#product .slick-dots li{display:none;}
+#product{padding-top:0}
+#hello .insa{position:absolute; z-index:10000;/* background-color:rgba(255,255,255,0.3);*/ /*padding:170px*/}
+#hello img{margin:0 auto;}
+#hello .insa p{line-height: 4rem;font-size:2rem;}
+#hello img{height:500px;transform: translate(0.5%);}
+#slide .slide_content{height:240px;}
+#slide .slide_img{bottom:-10%;}
+#guide {
+    height:auto;padding-bottom:50px;
+}
+#guide ul{flex-wrap: wrap;display:flex; }
+#guide .sec_tit2{display: flex;align-items: center;padding-top:6%}
+#guide .sec_tit2 p{padding-left:10px;}
+
+#guide .sns{display: flex; flex-wrap: wrap;}
+#guide .sns p{width:50%;padding-right:10%;padding-left:10%;padding-top:5%;}
+#guide .sns_bg{height:250px;border-radius:0px; width:80%}
+#guide .sns img{width:100%;}
+#guide .box_tit{display:flex;width:80%;}
+#guide .box_mobile{width:100%;word-break: keep-all;}
+
+#footer{background: none;position:static;padding-top:0;}
+#guide .box4{border-bottom-right-radius:0;}
+
+#footer .footer_logo{padding-top:10%}
+}/*end*/
+
+@media all and (max-width:760px){
+  #logo{transform: translate(-10%,5%);}
+    #hello .insa p{padding:0}
+    #slide .slide_tit{padding-top:40%;font-size:2.5rem;word-break: keep-all;}
+    #slide section{padding-top:5%; padding-bottom:5%;}
+    #slide .slide_txt{display: none;}
+ /*   #slide .slick-dots li.slick-active button{background-color:transparent;}
+    #slide .slick-dots button{background:none;}  */
+    #slide .slide_img{bottom:-5%;}
+    #guide .sns p{width:80%}
+    #guide .sns_bg{height:auto;padding-bottom:20px;}
+    #guide .sns{display: flex;flex-wrap:wrap;justify-content: center; align-items:center;}
+    .modal{top:110%;}
+    .modal img{width:50%;}
+    #top{top:75%;right:-5%}
+    #top img{width:50%;}
+    #guide .sec_tit2{flex-wrap: wrap;}
+    .slide_content .slick-arrow {bottom:-20%;}
+    #guide .box_tit h4{font-size:1.5rem;}
+    #product .pick img{left:35%}
+    .box .depth1{margin:0;}
+    .box .depth1>li {padding:0;padding-top:20% ;line-height:1.5rem;}
+    #slide{margin-bottom: 100px;}
+#pop_up .img img{width:100%;min-width:300px}
+ 
+    
+    }
